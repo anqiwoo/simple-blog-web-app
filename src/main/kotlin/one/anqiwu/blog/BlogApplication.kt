@@ -3,7 +3,7 @@ package one.anqiwu.blog
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
-@SpringBootAppliechcation
+@SpringBootApplication
 class BlogApplication
 
 fun main(args: Array<String>) {
