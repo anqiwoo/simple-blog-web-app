@@ -1,10 +1,7 @@
 package one.anqiwu.blog
 
-import jakarta.persistence.Entity
-import jakarta.persistence.GeneratedValue
-import jakarta.persistence.Id
-import jakarta.persistence.ManyToOne
 import java.time.LocalDateTime
+import jakarta.persistence.*
 
 @Entity
 class Article(

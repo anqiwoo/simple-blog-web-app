@@ -5,6 +5,11 @@ plugins {
 	id("io.spring.dependency-management") version "1.1.6"
 	kotlin("plugin.jpa") version "1.9.24"
 	kotlin("plugin.allopen") version "1.9.22"
+	//	To generate your own metadata in order to
+	//	get these custom properties recognized by your IDE,
+	//	kapt should be configured with
+	//	the spring-boot-configuration-processor dependency
+	kotlin("kapt") version "1.9.22"
 }
 
 // In order to make lazy fetching working as expected,
@@ -47,6 +52,8 @@ dependencies {
 	testImplementation("org.junit.jupiter:junit-jupiter-api")
 	testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
 	testImplementation("com.ninja-squad:springmockk:4.0.2")
+
+	kapt("org.springframework.boot:spring-boot-configuration-processor")
 }
 
 kotlin {
