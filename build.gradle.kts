@@ -4,6 +4,16 @@ plugins {
 	id("org.springframework.boot") version "3.3.2"
 	id("io.spring.dependency-management") version "1.1.6"
 	kotlin("plugin.jpa") version "1.9.24"
+	kotlin("plugin.allopen") version "1.9.22"
+}
+
+// In order to make lazy fetching working as expected,
+// entities should be open as described in KT-28525.
+// We are going to use the Kotlin allopen plugin for that purpose.
+allOpen {
+	annotation("jakarta.persistence.Entity")
+	annotation("jakarta.persistence.Embeddable")
+	annotation("jakarta.persistence.MappedSuperclass")
 }
 
 group = "one.anqiwu"
